@@ -1,5 +1,32 @@
 apply plugin: 'java'
 
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    provided
+}
+
+sourceSets {
+    main { compileClasspath += configurations.provided }
+}
+
+dependencies {
+    compile 'org.apache.pdfbox:pdfbox:1.8.5'
+    compile 'org.springframework:spring-core:3.0.2.RELEASE'
+    compile 'org.springframework:spring-web:3.0.2.RELEASE'
+    compile 'org.springframework:spring-webmvc:3.0.2.RELEASE'
+    compile 'org.openid4java:openid4java:0.9.8'
+
+    provided 'javax.servlet:javax.servlet-api:3.1.0'
+
+    testCompile 'junit:junit:4.11'
+    testCompile 'log4j:log4j:1.2.17'
+    testCompile 'org.springframework:spring-test:3.0.2.RELEASE'
+    testCompile 'net.sourceforge.htmlunit:htmlunit:2.15'
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '1.12'
 }

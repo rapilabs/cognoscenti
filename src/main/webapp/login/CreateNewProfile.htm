@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Login</title>
+        <link rel="stylesheet" href="body.css" />
+    </head>    
+    <body>
+        <div class="loginWrapper">
+            <div class="loginHeader">Need your confirmation</div>
+            <form action="createNewProfile.form" method="post">
+                <div class="loginContentArea">
+                    You have been authenticated with:<br/>
+                    <ul><b>{{confirmId}}</b></ul>
+                    but we can't find any profile that includes this ID.
+                    If this is not a mistake, and you wish to create a new profile 
+                    then please confirm below & access using a new profile.<br /><br />
+                    <input type="submit" name="op" value="Confirm & Create New Profile" class="btnBlue"  
+                           title="A new profile will be create for you using this login ID"/><br /><br />
+                    <b style="font-size:18px; color:#666">
+                    <i>If you want to associate this ID with an existing profile:</i></b><br />
+                    If you think you already have an existing account, and you were just trying to 
+                    associate a new login with your existing account, here's what to do:
+                    <ul>
+                        <li>Press cancel, and then log in to your existing account</li>
+                        <li>then choose to <b>add more logins</b> to associate this ID with that profile</li>
+                    </ul>            
+                </div>
+                <div align="right" style="padding:10px 20px;border-top:1px solid #ccc">
+                    <input type="submit" name="op" value="Cancel" class="btnGray" 
+                           title="Pressing cancel will return you to the application without logging in." />
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+<!--
+{{debug}}
+-->

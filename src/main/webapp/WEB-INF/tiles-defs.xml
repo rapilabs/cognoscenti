@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+    <definition name="baseLayout" template="/spring/tiles/baseLayout.jsp">
+        <put-attribute name="title" value="Template" />
+        <put-attribute name="header" value="/spring/tiles/header.jsp" />
+        <put-attribute name="menu" value="/spring/jsp/leftMenu.jsp" />
+        <put-attribute name="body" value="/spring/tiles/body.jsp" />
+        <put-attribute name="footer" value="/spring/tiles/footer.jsp" />
+    </definition>
+
+     <definition name="projectBaseLayout" template="/spring/tiles/baseLayout.jsp">
+        <put-attribute name="title" value="Template" />
+        <put-attribute name="header" value="/spring/tiles/header.jsp" />
+        <put-attribute name="menu" value="/spring/jsp/leftMenu.jsp" />
+        <put-attribute name="body" value="/spring/tiles/body.jsp" />
+        <put-attribute name="footer" value="/spring/tiles/footer.jsp?autoupdate=true" />
+    </definition>
+
+    <definition name="baseLayoutWithoutLeftPanel" template="/spring/tiles/baseLayoutWithoutLeftPanel.jsp">
+        <put-attribute name="title" value="Template" />
+        <put-attribute name="header" value="/spring/tiles/header.jsp" />
+        <put-attribute name="body" value="/spring/tiles/body.jsp" />
+        <put-attribute name="footer" value="/spring/tiles/footer.jsp" />
+    </definition>
+
+  <definition name="baseLayoutSimple" template="/spring/tiles/baseLayoutSimple.jsp">
+        <put-attribute name="title" value="Template" />
+        <put-attribute name="body" value="/spring/tiles/body.jsp" />
+    </definition>
+
+    <definition name="public" extends="projectBaseLayout">
+        <put-attribute name="title" value="Public" />
+        <put-attribute name="body" value="/spring/jsp/leaf_public.jsp" />
+    </definition>
+
+    <definition name="account_public" extends="baseLayout">
+        <put-attribute name="title" value="Public" />
+        <put-attribute name="body" value="/spring/jsp/leaf_public_account.jsp" />
+    </definition>
+
+      <definition name="account_private" extends="baseLayout">
+        <put-attribute name="title" value="Private" />
+        <put-attribute name="body" value="/spring/jsp/leaf_private_account.jsp" />
+    </definition>
+
+     <definition name="account_member" extends="baseLayout">
+        <put-attribute name="title" value="Member" />
+        <put-attribute name="body" value="/spring/jsp/leaf_member_account.jsp" />
+    </definition>
+
+    <definition name="projectSettings" extends="baseLayout">
+        <put-attribute name="title" value="Project Home" />
+        <put-attribute name="body" value="/spring/jsp/leaf_ProjectSettings.jsp" />
+    </definition>
+
+    <definition name="permission" extends="baseLayout">
+        <put-attribute name="title" value="Permission" />
+        <put-attribute name="body" value="/spring/jsp/leaf_permission.jsp" />
+    </definition>
+
+    <definition name="account_permission" extends="baseLayout">
+        <put-attribute name="title" value="Permission" />
+        <put-attribute name="body" value="/spring/jsp/leaf_account_permission.jsp" />
+    </definition>
+
+    <definition name="role" extends="baseLayout">
+        <put-attribute name="title" value="Create New Role" />
+        <put-attribute name="body" value="/spring/jsp/createNewRole.jsp" />
+    </definition>
+
+    <definition name="member" extends="projectBaseLayout">
+        <put-attribute name="title" value="Member" />
+        <put-attribute name="body" value="/spring/jsp/leaf_member.jsp" />
+    </definition>
+
+     <definition name="leaf_deleted" extends="projectBaseLayout">
+        <put-attribute name="title" value="Deleted Notes" />
+        <put-attribute name="body" value="/spring/jsp/leaf_deleted.jsp" />
+    </definition>
+
+
+    <definition name="leaf_admin" extends="baseLayout">
+        <put-attribute name="title" value="Admin" />
+        <put-attribute name="body" value="/spring/jsp/leaf_admin.jsp" />
+    </definition>
+
+    <definition name="leaf_attach" extends="projectBaseLayout">
+        <put-attribute name="title" value="Attachments" />
+        <put-attribute name="body" value="/spring/jsp/leaf_attach.jsp" />
+    </definition>
+
+    <definition name="leaf_deleted_attach" extends="projectBaseLayout">
+        <put-attribute name="title" value="Attachments" />
+        <put-attribute name="body" value="/spring/jsp/leaf_deleted_attach.jsp" />
+    </definition>
+
+    <definition name="process" extends="projectBaseLayout">
+        <put-attribute name="title" value="Process" />
+        <put-attribute name="body" value="/spring/jsp/leaf_process.jsp" />
+    </definition>
+
+    <definition name="history" extends="projectBaseLayout">
+        <put-attribute name="title" value="History" />
+        <put-attribute name="body" value="/spring/jsp/leaf_history.jsp" />
+    </definition>
+
+    <definition name="userProfile" extends="baseLayout">
+        <put-attribute name="title" value="User Settings" />
+        <put-attribute name="body" value="/spring/jsp/UserProfile.jsp" />
+    </definition>
+
+    <definition name="upload_attachment" extends="baseLayout">
+        <put-attribute name="title" value="Upload Attachments" />
+        <put-attribute name="body" value="/spring/jsp/createAttachment.jsp" />
+    </definition>
+
+    <definition name="createProfile" extends="baseLayout">
+        <put-attribute name="title" value="CreateProfile" />
+        <put-attribute name="body" value="/spring/jsp/CreateUserProfile.jsp" />
+    </definition>
+
+    <definition name="CreateProject" extends="baseLayout">
+        <put-attribute name="title" value="Create New Project" />
+        <put-attribute name="body" value="/spring/jsp/createproject.jsp" />
+    </definition>
+
+
+    <definition name="upload_link_attachment" extends="baseLayout">
+        <put-attribute name="title" value="Upload Attachments" />
+        <put-attribute name="body" value="/spring/jsp/createLinkURL.jsp" />
+    </definition>
+
+    <definition name="email_reminder" extends="baseLayout">
+        <put-attribute name="title" value="Create Email reminder" />
+        <put-attribute name="body" value="/spring/jsp/emailReminder.jsp" />
+    </definition>
+
+    <definition name="YYY_attachment_forms" extends="baseLayout">
+        <put-attribute name="title" value="Upload Attachments" />
+        <put-attribute name="body" value="/spring/jsp/attachment_forms.jsp" />
+    </definition>
+
+    <definition name="ReminderEmail" extends="baseLayout">
+        <put-attribute name="title" value="Send Email Reminder" />
+        <put-attribute name="body" value="/spring/jsp/ReminderEmail.jsp" />
+    </definition>
+
+    <definition name="landingPage" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Cognoscenti Console" />
+        <put-attribute name="body" value="/spring/jsp/index.jsp" />
+    </definition>
+
+    <definition name="UserHome" extends="baseLayout">
+        <put-attribute name="title" value="User Projects" />
+        <put-attribute name="body" value="/spring/jsp/UserHome.jsp" />
+    </definition>
+
+    <definition name="WatchedProjects" extends="baseLayout">
+        <put-attribute name="title" value="Watched Projects" />
+        <put-attribute name="body" value="/spring/jsp/WatchedProjects.jsp" />
+    </definition>
+
+    <definition name="NotifiedProjects" extends="baseLayout">
+        <put-attribute name="title" value="Notified Projects" />
+        <put-attribute name="body" value="/spring/jsp/NotifiedProjects.jsp" />
+    </definition>
+
+    <definition name="AllProjects" extends="baseLayout">
+        <put-attribute name="title" value="All Projects" />
+        <put-attribute name="body" value="/spring/jsp/AllProjects.jsp" />
+    </definition>
+
+    <definition name="Templates" extends="baseLayout">
+        <put-attribute name="title" value="Templates" />
+        <put-attribute name="body" value="/spring/jsp/Templates.jsp" />
+    </definition>
+
+    <definition name="FolderDisplay" extends="baseLayout">
+        <put-attribute name="title" value="Display Folder" />
+        <put-attribute name="body" value="/spring/jsp/FolderDisplay.jsp" />
+    </definition>
+
+    <definition name="ListConnections" extends="baseLayout">
+        <put-attribute name="title" value="List Connections" />
+        <put-attribute name="body" value="/spring/jsp/ListConnections.jsp" />
+    </definition>
+
+    <definition name="BrowseConnection" extends="baseLayout">
+        <put-attribute name="title" value="Browse Connections" />
+        <put-attribute name="body" value="/spring/jsp/BrowseConnection.jsp" />
+    </definition>
+
+    <definition name="UserAlerts" extends="baseLayout">
+        <put-attribute name="title" value="User Updates" />
+        <put-attribute name="body" value="/spring/jsp/UserAlerts.jsp" />
+    </definition>
+
+    <definition name="FillProfileForm" extends="baseLayout">
+        <put-attribute name="title" value="Fill In User Details" />
+        <put-attribute name="body" value="/spring/jsp/FillProfile.jsp" />
+    </definition>
+
+    <definition name="projectHome" extends="baseLayout">
+        <put-attribute name="title" value="Public" />
+        <put-attribute name="body" value="/spring/jsp/leaf_ProjectHome.jsp" />
+    </definition>
+
+    <definition name="editprocess" extends="baseLayout">
+        <put-attribute name="title" value="Process" />
+        <put-attribute name="body" value="/spring/jsp/leaf_edit_process.jsp" />
+    </definition>
+
+    <definition name="editrole" extends="baseLayout">
+        <put-attribute name="title" value="Edit Role" />
+        <put-attribute name="body" value="/spring/jsp/EditRole.jsp" />
+    </definition>
+
+    <definition name="subtask" extends="baseLayout">
+        <put-attribute name="title" value="SubTask" />
+        <put-attribute name="body" value="/spring/jsp/leaf_subtask.jsp" />
+   </definition>
+
+    <definition name="reassigntask" extends="baseLayout">
+        <put-attribute name="title" value="Reassign Task" />
+        <put-attribute name="body" value="/spring/jsp/reassign_popup.jsp" />
+    </definition>
+
+    <definition name="WaitForEmail" extends="baseLayout">
+        <put-attribute name="title" value="Wait for Email" />
+        <put-attribute name="body" value="/spring/jsp/WaitForEmail.jsp" />
+    </definition>
+
+    <definition name="ChangePassword" extends="baseLayout">
+        <put-attribute name="title" value="Wait for Email" />
+        <put-attribute name="body" value="/spring/jsp/ChangePassword.jsp" />
+    </definition>
+
+    <definition name="addDocument" extends="baseLayout">
+        <put-attribute name="title" value="Add Document" />
+        <put-attribute name="body" value="/spring/jsp/addDocument.jsp" />
+    </definition>
+    <definition name="xbrlValidate" extends="baseLayout">
+        <put-attribute name="title" value="XBRL Validation Setup" />
+        <put-attribute name="body" value="/spring/jsp/xbrlValidate.jsp" />
+    </definition>
+    <definition name="xbrlResults" extends="baseLayout">
+        <put-attribute name="title" value="XBRL Validation Results" />
+        <put-attribute name="body" value="/spring/jsp/xbrlResults.jsp" />
+    </definition>
+    <definition name="uploadDocumentForm" extends="baseLayout">
+        <put-attribute name="title" value="Upload Attachment Form" />
+        <put-attribute name="body" value="/spring/jsp/uploadDocumentForm.jsp" />
+    </definition>
+     <definition name="UploadRevisedDocument" extends="baseLayout">
+        <put-attribute name="title" value="Upload Attachment Form" />
+        <put-attribute name="body" value="/spring/jsp/UploadRevisedDocument.jsp" />
+    </definition>
+
+    <definition name="createLinkUrlProjectForm" extends="baseLayout">
+        <put-attribute name="title" value="Link URL To Project Form" />
+        <put-attribute name="body" value="/spring/jsp/createLinkUrlProjectForm.jsp" />
+    </definition>
+
+    <definition name="linkfromrepository_form" extends="baseLayout">
+        <put-attribute name="title" value="Link To Repository Form" />
+        <put-attribute name="body" value="/spring/jsp/createLinkToRepositoryForm.jsp" />
+    </definition>
+
+    <definition name="emailreminder_form" extends="baseLayout">
+        <put-attribute name="title" value="Email Reminder Form" />
+        <put-attribute name="body" value="/spring/jsp/emailReminderForm.jsp" />
+    </definition>
+
+    <definition name="editDetails" extends="baseLayout">
+        <put-attribute name="title" value="Edit Document Form" />
+        <put-attribute name="body" value="/spring/jsp/editDetails.jsp" />
+    </definition>
+
+    <definition name="fileVersions" extends="baseLayout">
+        <put-attribute name="title" value="File version list" />
+        <put-attribute name="body" value="/spring/jsp/fileVersions.jsp" />
+    </definition>
+
+    <definition name="rename_doc_form" extends="baseLayout">
+        <put-attribute name="title" value="File version list" />
+        <put-attribute name="body" value="/spring/jsp/renameDocForm.jsp" />
+    </definition>
+    <definition name="commonError" extends="baseLayoutSimple">
+        <put-attribute name="title" value="Error Details Page" />
+        <put-attribute name="body" value="/spring/jsp/error.jsp" />
+    </definition>
+    <definition name="SendNoteByEmail" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Send Note By Email" />
+        <put-attribute name="body" value="/spring/jsp/SendNoteByEmail.jsp" />
+    </definition>
+    <definition name="EmailAdjustment" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Adjust Email Subscriptions" />
+        <put-attribute name="body" value="/spring/jsp/EmailAdjustment.jsp" />
+    </definition>
+    <definition name="NoteZoomView" extends="projectBaseLayout">
+        <put-attribute name="title" value="Zoomed View" />
+        <put-attribute name="body" value="/spring/jsp/leaflet.jsp" />
+    </definition>
+    <definition name="AccountNoteZoomView" extends="baseLayout">
+        <put-attribute name="title" value="Zoom view of Note" />
+        <put-attribute name="body" value="/spring/jsp/leaflet_account.jsp" />
+    </definition>
+
+    <definition name="editUserProfile" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Update User Profile" />
+        <put-attribute name="body" value="/spring/jsp/edituserprofile.jsp" />
+    </definition>
+    <definition name="addUserIdForm" extends="baseLayout">
+        <put-attribute name="title" value="Update User Profile" />
+        <put-attribute name="body" value="/spring/jsp/addUserId.jsp" />
+    </definition>
+    <definition name="remind_attachment" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Upload Attachment" />
+        <put-attribute name="body" value="/spring/jsp/remindAttachment.jsp" />
+    </definition>
+
+    <definition name="personal" extends="projectBaseLayout">
+        <put-attribute name="title" value="Personal" />
+        <put-attribute name="body" value="/spring/jsp/leaf_personal.jsp" />
+    </definition>
+    <definition name="leaf_streamingLinks" extends="projectBaseLayout">
+        <put-attribute name="title" value="Streaming Links" />
+        <put-attribute name="body" value="/spring/jsp/leaf_streamingLinks.jsp" />
+    </definition>
+    <definition name="synchronizeUpstream" extends="projectBaseLayout">
+        <put-attribute name="title" value="Synchronize Upstream" />
+        <put-attribute name="body" value="/spring/jsp/synchronizeUpstream.jsp" />
+    </definition>
+    <definition name="account_personal" extends="baseLayout">
+        <put-attribute name="title" value="Personal" />
+        <put-attribute name="body" value="/spring/jsp/leaf_account_personal.jsp" />
+    </definition>
+    <definition name="accountHomePage" extends="baseLayout">
+        <put-attribute name="title" value="Site" />
+        <put-attribute name="body" value="/spring/jsp/UserAccountHome.jsp" />
+    </definition>
+    <definition name="accountListProjects" extends="baseLayout">
+        <put-attribute name="title" value="List of Site Projects" />
+        <put-attribute name="body" value="/spring/jsp/accountListProjects.jsp" />
+    </definition>
+    <definition name="accountCreateProject" extends="baseLayout">
+        <put-attribute name="title" value="Create Project" />
+        <put-attribute name="body" value="/spring/jsp/accountCreateProject.jsp" />
+    </definition>
+    <definition name="convertFolderProject" extends="baseLayout">
+        <put-attribute name="title" value="Convert Folder" />
+        <put-attribute name="body" value="/spring/jsp/convertFolderProject.jsp" />
+    </definition>
+    <definition name="UserAccountSetting" extends="baseLayout">
+        <put-attribute name="title" value="Admin" />
+        <put-attribute name="headerType" value="site" />
+        <put-attribute name="body" value="/spring/jsp/UserAccountSetting.jsp" />
+    </definition>
+    <definition name="leaf_project" extends="baseLayout">
+        <put-attribute name="title" value="Project" />
+        <put-attribute name="body" value="/spring/jsp/leaf_project.jsp" />
+    </definition>
+
+    <definition name="TagLinks" extends="baseLayout">
+      <put-attribute name="title" value="Cognoscenti Search" />
+      <put-attribute name="body" value="/spring/jsp/TagLinks.jsp" />
+    </definition>
+
+    <definition name="UserAccounts" extends="baseLayout">
+        <put-attribute name="title" value="User Sites" />
+        <put-attribute name="body" value="/spring/jsp/UserAccounts.jsp" />
+    </definition>
+
+    <definition name="UserCreateProject" extends="baseLayout">
+        <put-attribute name="title" value="User Create Project" />
+        <put-attribute name="body" value="/spring/jsp/UserCreateProject.jsp" />
+    </definition>
+
+    <definition name="account_history" extends="baseLayout">
+        <put-attribute name="title" value="Site History" />
+        <put-attribute name="body" value="/spring/jsp/leaf_account_history.jsp" />
+    </definition>
+
+    <definition name="editRoleAccount" extends="baseLayout">
+        <put-attribute name="title" value="Process" />
+        <put-attribute name="body" value="/spring/jsp/EditRoleAccount.jsp" />
+    </definition>
+
+     <definition name="PreviewNoteForEmail" extends="baseLayoutWithoutLeftPanel">
+            <put-attribute name="title" value="Preview Note For Email" />
+            <put-attribute name="body" value="/spring/jsp/email_preview_popup.jsp" />
+    </definition>
+
+    <definition name="docinfo" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Download Document" />
+        <put-attribute name="body" value="/spring/jsp/docinfo.jsp" />
+    </definition>
+
+    <definition name="showSearchResult" extends="baseLayout">
+        <put-attribute name="title" value="Search Result" />
+        <put-attribute name="body" value="/spring/jsp/showSearchResult.jsp" />
+    </definition>
+
+    <definition name="reminders" extends="baseLayout">
+        <put-attribute name="title" value="Reminders" />
+        <put-attribute name="body" value="/spring/jsp/reminders.jsp" />
+    </definition>
+
+    <definition name="roleRequest" extends="baseLayout">
+        <put-attribute name="title" value="Role Request" />
+        <put-attribute name="body" value="/spring/jsp/leaf_roleRequest.jsp" />
+    </definition>
+
+    <definition name="invitedUserRegistrationForm" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="New User Registration Form" />
+        <put-attribute name="body" value="/spring/jsp/InvitedUserRegistration.jsp" />
+    </definition>
+
+    <definition name="approveAccountThroughMail" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Site Approval Form" />
+        <put-attribute name="body" value="/spring/jsp/AccountApproval.jsp" />
+    </definition>
+
+    <definition name="RequestAccount" extends="baseLayout">
+        <put-attribute name="title" value="Site Request Form" />
+        <put-attribute name="body" value="/spring/jsp/RequestAccount.jsp" />
+    </definition>
+
+    <definition name="account_role_request" extends="baseLayout">
+        <put-attribute name="title" value="Role Requests" />
+        <put-attribute name="body" value="/spring/jsp/leaf_accountRoleRequest.jsp" />
+    </definition>
+
+    <definition name="inviteUser" extends="baseLayout">
+        <put-attribute name="title" value="Role Requests" />
+        <put-attribute name="body" value="/spring/jsp/invite_user.jsp" />
+    </definition>
+
+        <definition name="Administration" extends="baseLayout">
+        <put-attribute name="title" value="Administration" />
+        <put-attribute name="body" value="/spring/jsp/administration.jsp" />
+    </definition>
+
+    <definition name="htmlValidator" extends="baseLayoutSimple">
+        <put-attribute name="title" value="Result Of HTML Validation" />
+        <put-attribute name="body" value="/spring/jsp/validateResult.jsp" />
+    </definition>
+     <definition name="CreateProjectFromTask" extends="baseLayout">
+        <put-attribute name="title" value="Create Project" />
+        <put-attribute name="body" value="/spring/jsp/CreateProjectFromTask.jsp" />
+    </definition>
+
+    <definition name="exportPDF" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Export PDF" />
+        <put-attribute name="body" value="/spring/jsp/exportPDF.jsp" />
+    </definition>
+
+    <definition name="SyncAttachment" extends="baseLayout">
+        <put-attribute name="title" value="Syncronise Attachment" />
+        <put-attribute name="body" value="/spring/jsp/SyncAttachment.jsp" />
+    </definition>
+
+
+    <definition name="LinkDocFromRepositoryForm" extends="baseLayout">
+        <put-attribute name="title" value="Attach Document"/>
+        <put-attribute name="body" value="/spring/jsp/LinkDocFromRepositoryForm.jsp"/>
+    </definition>
+
+    <definition name="WebDevURLForm" extends="baseLayout">
+        <put-attribute name="title" value="Attach Document"/>
+        <put-attribute name="body" value="/spring/jsp/WebDevURLForm.jsp"/>
+    </definition>
+
+    <definition name="CreateNewConnection_form" extends="baseLayout">
+        <put-attribute name="title" value="Attach Document"/>
+        <put-attribute name="body" value="/spring/jsp/CreateNewConnection_form.jsp"/>
+    </definition>
+
+    <definition name="ProblemDiagnosePage" extends="baseLayout">
+        <put-attribute name="title" value="Problem Diagnose Page"/>
+        <put-attribute name="body" value="/spring/jsp/ProblemDiagnosePage.jsp"/>
+    </definition>
+
+    <definition name="errorLog" extends="baseLayout">
+        <put-attribute name="title" value="Error Log Console"/>
+        <put-attribute name="body" value="/spring/jsp/errorLog.jsp"/>
+    </definition>
+
+      <definition name="detailsErrorLog" extends="baseLayout">
+        <put-attribute name="title" value="Details Error Log"/>
+        <put-attribute name="body" value="/spring/jsp/detailsErrorLog.jsp"/>
+    </definition>
+
+    <definition name="CreateCopy" extends="baseLayout">
+        <put-attribute name="title" value="Create Copy in Repository"/>
+        <put-attribute name="body" value="/spring/jsp/CreateCopy.jsp"/>
+    </definition>
+
+    <definition name="ChooseFolder" extends="baseLayout">
+        <put-attribute name="title" value="ChooseFolder"/>
+        <put-attribute name="body" value="/spring/jsp/ChooseFolder.jsp"/>
+    </definition>
+
+    <definition name="PushToRepository" extends="baseLayout">
+        <put-attribute name="title" value="ChooseFolder"/>
+        <put-attribute name="body" value="/spring/jsp/PushToRepository.jsp"/>
+    </definition>
+
+    <definition name="CreateNewConnection" extends="baseLayout">
+        <put-attribute name="title" value="Create New Connection"/>
+        <put-attribute name="body" value="/spring/jsp/CreateNewConnection.jsp"/>
+    </definition>
+
+    <definition name="closeWindow" extends="baseLayout">
+        <put-attribute name="title" value="Close Window"/>
+        <put-attribute name="body" value="/spring/jsp/closeWindow.jsp"/>
+    </definition>
+
+    <definition name="Contacts" extends="baseLayout">
+        <put-attribute name="title" value="Problem Diagnose Page"/>
+        <put-attribute name="body" value="/spring/jsp/Contacts.jsp"/>
+    </definition>
+
+    <definition name="leaf_draftNotes" extends="projectBaseLayout">
+        <put-attribute name="title" value="Draft Notes" />
+        <put-attribute name="body" value="/spring/jsp/leaf_draftNotes.jsp" />
+    </definition>
+
+
+    <definition name="openIdLogin" extends="baseLayoutSimple">
+        <put-attribute name="title" value="OpenId Login"/>
+        <put-attribute name="body" value="/spring/jsp/openIdLogin.jsp"/>
+    </definition>
+
+    <definition name="FileExist" extends="projectBaseLayout">
+        <put-attribute name="title" value="File Already Exist in Repository" />
+        <put-attribute name="body" value="/spring/jsp/FileExist.jsp" />
+    </definition>
+
+    <definition name="emailrecords" extends="projectBaseLayout">
+        <put-attribute name="title" value="Email Records" />
+        <put-attribute name="body" value="/spring/jsp/emailrecords.jsp" />
+    </definition>
+
+     <definition name="ganttchart" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="GanttChart" />
+        <put-attribute name="body" value="/spring/jsp/ganttchart.jsp" />
+    </definition>
+
+     <definition name="texteditor" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="" />
+        <put-attribute name="body" value="/spring/jsp/texteditor.jsp" />
+    </definition>
+
+    <definition name="Warning" extends="baseLayout">
+        <put-attribute name="title" value="Warning" />
+        <put-attribute name="body" value="/spring/jsp/Warning.jsp" />
+    </definition>
+
+    <definition name="requiredName" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Warning" />
+        <put-attribute name="body" value="/spring/jsp/requiredName.jsp" />
+    </definition>
+
+    <definition name="requiredEmail" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Warning" />
+        <put-attribute name="body" value="/spring/jsp/requiredEmail.jsp" />
+    </definition>
+
+    <definition name="DisplayException" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Display Exception" />
+        <put-attribute name="body" value="/spring/jsp/DisplayException.jsp" />
+    </definition>
+
+    <definition name="confirmedAddIdView" extends="baseLayout">
+        <put-attribute name="title" value="User Settings" />
+        <put-attribute name="body" value="/spring/jsp/confirmedAddIdView.jsp" />
+    </definition>
+
+    <definition name="viewReminder" extends="baseLayout">
+        <put-attribute name="title" value="View Email Reminder" />
+        <put-attribute name="body" value="/spring/jsp/viewReminder.jsp" />
+    </definition>
+
+    <definition name="notification" extends="baseLayout">
+        <put-attribute name="title" value="Notification Settings" />
+        <put-attribute name="header" value="/spring/tiles/header.jsp" />
+        <put-attribute name="body" value="/spring/jsp/notification.jsp" />
+        <put-attribute name="footer" value="/spring/tiles/footer.jsp" />
+    </definition>
+
+    <definition name="CompleteProfile" extends="baseLayout">
+        <put-attribute name="title" value="Complete Profile" />
+        <put-attribute name="body" value="/spring/jsp/CompleteProfile.jsp" />
+    </definition>
+
+    <definition name="ProjectActiveTasks" extends="projectBaseLayout">
+        <put-attribute name="title" value="Process" />
+        <put-attribute name="body" value="/spring/jsp/ProjectActiveTasks.jsp" />
+    </definition>
+
+    <definition name="ProjectCompletedTasks" extends="projectBaseLayout">
+        <put-attribute name="title" value="Process" />
+        <put-attribute name="body" value="/spring/jsp/ProjectCompletedTasks.jsp" />
+    </definition>
+
+    <definition name="ProjectFutureTasks" extends="projectBaseLayout">
+        <put-attribute name="title" value="Process" />
+        <put-attribute name="body" value="/spring/jsp/ProjectFutureTasks.jsp" />
+    </definition>
+
+    <definition name="ProjectsAllTasks" extends="projectBaseLayout">
+        <put-attribute name="title" value="Process" />
+        <put-attribute name="body" value="/spring/jsp/ProjectsAllTasks.jsp" />
+    </definition>
+
+    <definition name="ProjectStatusReport" extends="projectBaseLayout">
+        <put-attribute name="title" value="Process" />
+        <put-attribute name="body" value="/spring/jsp/ProjectStatusReport.jsp" />
+    </definition>
+
+    <definition name="emailListnerSettings" extends="baseLayout">
+        <put-attribute name="title" value="Email Listener Settings"/>
+        <put-attribute name="body" value="/spring/jsp/emailListnerSettings.jsp"/>
+    </definition>
+
+    <definition name="lastNotificationSend" extends="baseLayout">
+        <put-attribute name="title" value="Last Notification Send"/>
+        <put-attribute name="body" value="/spring/jsp/lastNotificationSend.jsp"/>
+    </definition>
+
+    <definition name="newAccounts" extends="baseLayout">
+        <put-attribute name="title" value="New Sites"/>
+        <put-attribute name="body" value="/spring/jsp/newAccounts.jsp"/>
+    </definition>
+
+    <definition name="newUsers" extends="baseLayout">
+        <put-attribute name="title" value="New Users"/>
+        <put-attribute name="body" value="/spring/jsp/newUsers.jsp"/>
+    </definition>
+
+    <definition name="requestedAccounts" extends="baseLayout">
+        <put-attribute name="title" value="Requested Sites"/>
+        <put-attribute name="body" value="/spring/jsp/requestedAccounts.jsp"/>
+    </definition>
+
+    <definition name="deniedAccounts" extends="baseLayout">
+        <put-attribute name="title" value="Denied Sites"/>
+        <put-attribute name="body" value="/spring/jsp/deniedAccounts.jsp"/>
+    </definition>
+
+    <definition name="UserActiveTasks" extends="baseLayout">
+        <put-attribute name="title" value="User Goals" />
+        <put-attribute name="body" value="/spring/jsp/UserActiveTasks.jsp" />
+    </definition>
+
+    <definition name="UserCompletedTasks" extends="baseLayout">
+        <put-attribute name="title" value="User Goals" />
+        <put-attribute name="body" value="/spring/jsp/UserCompletedTasks.jsp" />
+    </definition>
+
+    <definition name="UserFutureTasks" extends="baseLayout">
+        <put-attribute name="title" value="User Goals" />
+        <put-attribute name="body" value="/spring/jsp/UserFutureTasks.jsp" />
+    </definition>
+
+    <definition name="UserAllTasks" extends="baseLayout">
+        <put-attribute name="title" value="User Goals" />
+        <put-attribute name="body" value="/spring/jsp/UserAllTasks.jsp" />
+    </definition>
+
+    <definition name="ShareRequests" extends="baseLayout">
+        <put-attribute name="title" value="User Goals" />
+        <put-attribute name="body" value="/spring/jsp/ShareRequests.jsp" />
+    </definition>
+
+    <definition name="RemoteProfiles" extends="baseLayout">
+        <put-attribute name="title" value="User Goals" />
+        <put-attribute name="body" value="/spring/jsp/RemoteProfiles.jsp" />
+    </definition>
+
+    <definition name="ConsolidatedTasks" extends="baseLayout">
+        <put-attribute name="title" value="User Goals" />
+        <put-attribute name="body" value="/spring/jsp/ConsolidatedTasks.jsp" />
+    </definition>
+
+    <definition name="Agents" extends="baseLayout">
+        <put-attribute name="title" value="User Goals" />
+        <put-attribute name="body" value="/spring/jsp/Agents.jsp" />
+    </definition>
+
+    <definition name="EditAgent" extends="baseLayout">
+        <put-attribute name="title" value="User Goals" />
+        <put-attribute name="body" value="/spring/jsp/EditAgent.jsp" />
+    </definition>
+
+    <definition name="UserConnections" extends="baseLayout">
+        <put-attribute name="title" value="User Connections" />
+        <put-attribute name="body" value="/spring/jsp/UserConnections.jsp" />
+    </definition>
+
+    <definition name="UserContacts" extends="baseLayout">
+        <put-attribute name="title" value="User Contacts" />
+        <put-attribute name="body" value="/spring/jsp/UserContacts.jsp" />
+    </definition>
+
+    <definition name="UserSettings" extends="baseLayout">
+        <put-attribute name="title" value="User Settings" />
+        <put-attribute name="body" value="/spring/jsp/UserSettings.jsp" />
+    </definition>
+
+    <definition name="displayTaskInfo" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Process" />
+        <put-attribute name="body" value="/spring/jsp/displayTaskInfo.jsp" />
+    </definition>
+
+    <definition name="ViewRemoteTask" extends="baseLayoutWithoutLeftPanel">
+        <put-attribute name="title" value="Process" />
+        <put-attribute name="body" value="/spring/jsp/ViewRemoteTask.jsp" />
+    </definition>
+
+    <definition name="accountRequestResult" extends="baseLayout">
+        <put-attribute name="title" value="User Goals" />
+        <put-attribute name="body" value="/spring/jsp/accountRequestResult.jsp" />
+    </definition>
+
+    <definition name="unsubscribemember" extends="baseLayout">
+        <put-attribute name="title" value="Notification Settings" />
+        <put-attribute name="header" value="/spring/tiles/header.jsp" />
+        <put-attribute name="body" value="/spring/jsp/unsubscribemember.jsp" />
+        <put-attribute name="footer" value="/spring/tiles/footer.jsp" />
+    </definition>
+</tiles-definitions>
