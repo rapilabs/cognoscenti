@@ -96,7 +96,8 @@ public class RemoteProject
             httpCon.connect();
             OutputStream os = httpCon.getOutputStream();
             OutputStreamWriter osw = new OutputStreamWriter(os, "UTF-8");
-            msg.write(osw, 2, 0);
+//            msg.write(osw, 2, 0);
+            msg.write(osw);
             osw.flush();
             osw.close();
             os.close();

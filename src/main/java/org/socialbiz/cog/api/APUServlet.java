@@ -99,7 +99,7 @@ public class APUServlet extends javax.servlet.http.HttpServlet {
             root.put("goals", getGoalList(ar, userDec.uProf));
 
             ar.resp.setContentType("application/json");
-            root.write(ar.w, 2, 0);
+            root.write(ar.w);
             ar.flush();
         } catch (Exception e) {
             streamException(e, ar);
@@ -166,7 +166,7 @@ public class APUServlet extends javax.servlet.http.HttpServlet {
             exception.put("stack", sw.toString());
 
             ar.resp.setContentType("application/json");
-            errorResponse.write(ar.resp.writer, 2, 0);
+            errorResponse.write(ar.resp.writer);
             ar.flush();
         } catch (Exception eeeee) {
             // nothing we can do here...

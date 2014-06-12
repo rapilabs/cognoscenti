@@ -163,7 +163,7 @@ public class APIServlet extends javax.servlet.http.HttpServlet {
                 System.out.println("    PUT: file written: "+resDec.tempName);
                 JSONObject result = new JSONObject();
                 result.put("responseCode", 200);
-                result.write(ar.resp.getWriter(), 2, 0);
+                result.write(ar.resp.getWriter());
             }
             else {
                 throw new Exception("Can not do a PUT to that resource URL: "+ar.getCompleteURL());
@@ -201,7 +201,7 @@ public class APIServlet extends javax.servlet.http.HttpServlet {
             else {
                 responseObj = getProjectPostResponse(ar, resDec, op, objIn);
             }
-            responseObj.write(ar.resp.getWriter(), 2, 0);
+            responseObj.write(ar.resp.getWriter());
             ar.flush();
         }
         catch (Exception e) {
@@ -416,7 +416,7 @@ public class APIServlet extends javax.servlet.http.HttpServlet {
             exception.put("stack", sw.toString());
 
             ar.resp.setContentType("application/json");
-            errorResponse.write(ar.resp.writer, 2, 0);
+            errorResponse.write(ar.resp.writer);
             ar.flush();
         } catch (Exception eeeee) {
             // nothing we can do here...
@@ -455,7 +455,7 @@ public class APIServlet extends javax.servlet.http.HttpServlet {
         root.put("license", getLicenseInfo(resDec.lic));
 
         ar.resp.setContentType("application/json");
-        root.write(ar.resp.getWriter(), 2, 0);
+        root.write(ar.resp.getWriter());
         ar.flush();
     }
 
@@ -536,7 +536,7 @@ public class APIServlet extends javax.servlet.http.HttpServlet {
         root.put("notes", notes);
 
         ar.resp.setContentType("application/json");
-        root.write(ar.resp.getWriter(), 2, 0);
+        root.write(ar.resp.getWriter());
         ar.flush();
     }
 
@@ -552,7 +552,7 @@ public class APIServlet extends javax.servlet.http.HttpServlet {
         GoalRecord goal = resDec.project.getGoalOrFail(resDec.goalId);
         JSONObject goalObj = goal.getJSON4Goal(resDec.project, ar.baseURL, resDec.licenseId);
         ar.resp.setContentType("application/json");
-        goalObj.write(ar.resp.getWriter(), 2, 0);
+        goalObj.write(ar.resp.getWriter());
         ar.flush();
     }
 
