@@ -29,6 +29,7 @@ dependencies {
     compile 'slide:slide-webdavlib:2.1'
     compile 'jcifs:jcifs:1.3.17'
     compile 'net.sourceforge.jexcelapi:jxl:2.6.12'
+    compile fileTree(dir: 'lib', include: '*.jar')
 
     provided 'javax.servlet:servlet-api:2.5'
     provided 'javax.servlet:jsp-api:2.0'
