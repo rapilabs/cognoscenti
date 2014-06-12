@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  
+  <!-- Servlets -->  
+  <servlet>
+      <servlet-name>besServiceServlet</servlet-name>
+      <servlet-class>com.fujitsu.gwt.bewebapp.server.BesServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet>
+      <servlet-name>uploadServlet</servlet-name>
+      <servlet-class>com.fujitsu.gwt.bewebapp.server.FileUploadServlet</servlet-class>
+   </servlet>
+
+   <servlet>
+      <servlet-name>leafServiceServlet</servlet-name>
+      <servlet-class>com.fujitsu.gwt.bewebapp.server.LeafServiceImpl</servlet-class>
+   </servlet>
+    
+  <servlet-mapping>
+      <servlet-name>besServiceServlet</servlet-name>
+      <url-pattern>/bewebapp/besService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>leafServiceServlet</servlet-name>
+    <url-pattern>/bewebapp/leafService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+        <servlet-name>uploadServlet</servlet-name>
+        <url-pattern>/bewebapp/upload</url-pattern>
+   </servlet-mapping>
+  
+  
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>BeWebApp.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>

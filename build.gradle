@@ -1,15 +1,19 @@
-apply plugin: 'java'
+allprojects {
 
-repositories {
-    mavenCentral()
-}
+    apply plugin: 'java'
+    apply plugin: 'jetty'
 
-configurations {
-    provided
-}
+    repositories {
+        mavenCentral()
+    }
 
-sourceSets {
-    main { compileClasspath += configurations.provided }
+    configurations {
+        provided
+    }
+
+    sourceSets {
+        main { compileClasspath += configurations.provided }
+    }
 }
 
 dependencies {
@@ -36,8 +40,8 @@ dependencies {
     compile 'org.slf4j:slf4j-log4j12:1.5.8'
     compile fileTree(dir: 'lib', include: '*.jar')
 
-    provided 'javax.servlet:servlet-api:2.5'
-    provided 'javax.servlet:jsp-api:2.0'
+    compile 'javax.servlet:servlet-api:2.5'
+    compile 'javax.servlet:jsp-api:2.0'
 
     testCompile 'junit:junit:4.11'
     testCompile 'org.springframework:spring-test:3.0.2.RELEASE'
