@@ -33,6 +33,7 @@ import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.pdmodel.graphics.color.PDGamma;
 import org.apache.pdfbox.pdmodel.interactive.action.type.PDActionURI;
+import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationLink;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDBorderStyleDictionary;
 
@@ -1007,8 +1008,7 @@ public class WikiToPDF
         PDGamma gamma = new PDGamma();
         gamma.setB(1);
         txtLink.setColour(gamma);
-        @SuppressWarnings("unchecked")
-        List<PDAnnotationLink> annotations = pdpage.getAnnotations();
+        List<PDAnnotation> annotations = pdpage.getAnnotations();
         annotations.add(txtLink);
     }
 
