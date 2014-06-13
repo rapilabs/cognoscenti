@@ -1,10 +1,12 @@
 allprojects {
 
     apply plugin: 'java'
-    apply plugin: 'jetty'
 
     repositories {
         mavenCentral()
+        maven {
+            url 'http://gwtupload.googlecode.com/svn/mavenrepo'
+        }
     }
 
     configurations {
@@ -14,38 +16,33 @@ allprojects {
     sourceSets {
         main { compileClasspath += configurations.provided }
     }
-}
 
-dependencies {
-    compile 'org.apache.pdfbox:pdfbox:1.8.5'
-    compile 'org.springframework:spring-core:3.0.2.RELEASE'
-    compile 'org.springframework:spring-web:3.0.2.RELEASE'
-    compile 'org.springframework:spring-webmvc:3.0.2.RELEASE'
-    compile 'org.apache.tiles:tiles-core:2.2.2'
-    compile 'org.apache.tiles:tiles-servlet:2.2.2'
-    compile 'org.openid4java:openid4java:0.9.8'
-    compile 'net.sf.jtidy:jtidy:r938'
-    compile 'org.json:json:20140107'
-    compile 'javax.mail:mail:1.4.7'
-    compile 'org.apache.lucene:lucene-core:4.2.0'
-    compile 'org.apache.lucene:lucene-analyzers-common:4.2.0'
-    compile 'org.apache.lucene:lucene-queryparser:4.2.0'
-    compile 'commons-io:commons-io:2.4'
-    compile 'commons-fileupload:commons-fileupload:1.2.2'
-    compile 'org.apache.httpcomponents:httpclient:4.1.2'
-    compile 'slide:slide-webdavlib:2.1'
-    compile 'jcifs:jcifs:1.3.17'
-    compile 'net.sourceforge.jexcelapi:jxl:2.6.12'
-    compile 'log4j:log4j:1.2.17'
-    compile 'org.slf4j:slf4j-log4j12:1.5.8'
-    compile fileTree(dir: 'lib', include: '*.jar')
+    dependencies {
+        compile 'org.apache.pdfbox:pdfbox:1.8.5'
+        compile 'org.springframework:spring-core:3.0.2.RELEASE'
+        compile 'org.springframework:spring-web:3.0.2.RELEASE'
+        compile 'org.springframework:spring-webmvc:3.0.2.RELEASE'
+        compile 'org.apache.tiles:tiles-core:2.2.2'
+        compile 'org.apache.tiles:tiles-servlet:2.2.2'
+        compile 'org.openid4java:openid4java:0.9.8'
+        compile 'net.sf.jtidy:jtidy:r938'
+        compile 'org.json:json:20140107'
+        compile 'javax.mail:mail:1.4.7'
+        compile 'org.apache.lucene:lucene-core:4.2.0'
+        compile 'org.apache.lucene:lucene-analyzers-common:4.2.0'
+        compile 'org.apache.lucene:lucene-queryparser:4.2.0'
+        compile 'commons-io:commons-io:2.4'
+        compile 'commons-fileupload:commons-fileupload:1.2.2'
+        compile 'org.apache.httpcomponents:httpclient:4.1.2'
+        compile 'slide:slide-webdavlib:2.1'
+        compile 'jcifs:jcifs:1.3.17'
+        compile 'net.sourceforge.jexcelapi:jxl:2.6.12'
+        compile 'log4j:log4j:1.2.17'
+        compile 'org.slf4j:slf4j-log4j12:1.5.8'
 
-    compile 'javax.servlet:servlet-api:2.5'
-    compile 'javax.servlet:jsp-api:2.0'
-
-    testCompile 'junit:junit:4.11'
-    testCompile 'org.springframework:spring-test:3.0.2.RELEASE'
-    testCompile 'net.sourceforge.htmlunit:htmlunit:2.15'
+        provided 'javax.servlet:servlet-api:2.5'
+        provided 'javax.servlet:jsp-api:2.0'
+    }
 }
 
 task wrapper(type: Wrapper) {

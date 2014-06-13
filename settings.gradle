@@ -1,1 +1,3 @@
 include 'BeWebApp'
+include 'cogserv'
+include 'webapp'

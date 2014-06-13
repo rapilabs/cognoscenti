@@ -1,0 +1,12 @@
+
+apply plugin: 'jetty'
+
+dependencies {
+    compile project(':cogserv')
+    compile project(':BeWebApp')
+
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.springframework:spring-test:3.0.2.RELEASE'
+    testCompile 'net.sourceforge.htmlunit:htmlunit:2.15'
+}
+
